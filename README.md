@@ -1,0 +1,1 @@
+This repo will contain all my react projects which are done during my learning phase from odin project curriculum.
