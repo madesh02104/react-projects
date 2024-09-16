@@ -1,7 +1,3 @@
-This is a demo project to setup the react environment using vite.
-
-// Default Readme message from react-vite
-
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

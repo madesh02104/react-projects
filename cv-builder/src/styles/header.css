@@ -1,0 +1,17 @@
+header{
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+h1{
+    text-align: center;
+    font-weight: 500;
+}
+
+.details-span{
+    color: red;
+}
+
+.resume-span{
+    color: green;
+}
