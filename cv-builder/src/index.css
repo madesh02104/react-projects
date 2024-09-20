@@ -57,3 +57,18 @@ summary,
 [type=checkbox] {
     cursor: pointer;
 }
+
+:root {
+    --bg-yellow: rgba(254, 236, 179, 1);
+    --bg-ash: rgb(172, 167, 175);
+    --violet-dark: rgba(46, 7, 63, 1);
+    --violet-mid: rgba(191, 46, 240, 1);
+    --green-dark: rgba(13, 124, 102, 1);
+    --green-light: rgba(65, 179, 162, 1);
+    --yellow: rgba(250, 159, 2, 1);
+}
+
+body{
+    background-color: var(--bg-yellow);
+}
+
