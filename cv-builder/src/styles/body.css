@@ -23,10 +23,10 @@ transform: scale(0.95);
 Form {
   height: 85vh;
   width: 30%;
+  margin: 1rem;
+  border-radius: 0.5rem;
   overflow-y: auto;
   background-color: var(--bg-ash);
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
 }
 
 Form::-webkit-scrollbar {
