@@ -1,0 +1,13 @@
+.resume-div{
+    width: 70%;
+    height: 85vh;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.resume-sheet{
+    width: 90%;
+    background-color: #eeecec;
+}

@@ -59,7 +59,7 @@ summary,
 }
 
 :root {
-    --bg-yellow: rgba(254, 236, 179, 1);
+    --bg-yellow: rgb(212, 178, 66);
     --bg-ash: rgb(172, 167, 175);
     --violet-dark: rgba(46, 7, 63, 1);
     --violet-mid: rgba(191, 46, 240, 1);
