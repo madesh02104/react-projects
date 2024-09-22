@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types';
 
 export default function Education({ educationData, handleEducationChange }) {
+  
+  const handleInputChange = (e) => {
+    handleEducationChange({ ...educationData, [e.target.id]: e.target.value });
+  };  
+
   return (
     <div className="education-div">
       <h1>Education</h1>
@@ -10,7 +15,7 @@ export default function Education({ educationData, handleEducationChange }) {
           type="text" 
           id="college" 
           value={educationData.college} 
-          onChange={(e) => handleEducationChange('college', e.target.value)} 
+          onChange={handleInputChange} 
         />
 
         <label htmlFor="degree">Degree</label>
@@ -18,23 +23,23 @@ export default function Education({ educationData, handleEducationChange }) {
           type="text" 
           id="degree" 
           value={educationData.degree} 
-          onChange={(e) => handleEducationChange('degree', e.target.value)} 
+          onChange={handleInputChange}  
         />
 
         <label htmlFor="passout-clg">Passed out on</label>
         <input 
           type="text" 
-          id="passout-clg" 
+          id="passoutClg" 
           value={educationData.passoutClg} 
-          onChange={(e) => handleEducationChange('passoutClg', e.target.value)} 
+          onChange={handleInputChange}  
         />
 
         <label htmlFor="gpa-clg">Percentage/GPA</label>
         <input 
           type="text" 
-          id="gpa-clg" 
+          id="gpaClg" 
           value={educationData.gpaClg} 
-          onChange={(e) => handleEducationChange('gpaClg', parseFloat(e.target.value) || '')} 
+          onChange={handleInputChange} 
         />
 
         <label htmlFor="school">Schooling</label>
@@ -42,23 +47,23 @@ export default function Education({ educationData, handleEducationChange }) {
           type="text" 
           id="school" 
           value={educationData.school} 
-          onChange={(e) => handleEducationChange('school', e.target.value)} 
+          onChange={handleInputChange} 
         />
 
         <label htmlFor="passout-scl">Passed out on</label>
         <input 
           type="text" 
-          id="passout-scl" 
+          id="passoutScl" 
           value={educationData.passoutScl} 
-          onChange={(e) => handleEducationChange('passoutScl', e.target.value)} 
+          onChange={handleInputChange} 
         />
 
         <label htmlFor="gpa-scl">Percentage/GPA</label>
         <input 
           type="text" 
-          id="gpa-scl" 
+          id="gpaScl" 
           value={educationData.gpaScl} 
-          onChange={(e) => handleEducationChange('gpaScl', parseFloat(e.target.value) || '')} 
+          onChange={handleInputChange} 
         />
       </div>
     </div>
