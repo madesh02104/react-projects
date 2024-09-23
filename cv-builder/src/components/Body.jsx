@@ -27,7 +27,7 @@ export default function Body() {
       {
         company: 'Google',
         job: 'Software Engineer',
-        duration: 'July-2019 - Present',
+        duration: 'July 2019 - Present',
         location: 'Mountain View, California',
         achievements: [
           'Optimized application performance, reducing load times by 40% through code refactoring and implementation of efficient algorithms.',

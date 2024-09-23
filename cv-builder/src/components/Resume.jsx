@@ -1,8 +1,35 @@
-import '../styles/resume.css';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 import PropTypes from 'prop-types';
+import '../styles/resume.css';
 
 export default function Resume({ formData }) {
   const { personal, education, languages, experience } = formData;
+
+  const handleDownload = () => {
+    const resume = document.querySelector('.resume-sheet');
+
+    const resumeWidth = resume.offsetWidth;
+    const resumeHeight = resume.offsetHeight;
+
+    html2canvas(resume, {
+      scale: 2,
+      useCORS: true, 
+      width: resumeWidth, 
+      height: resumeHeight,
+    }).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png');
+
+      const pdf = new jsPDF({
+        orientation: 'portrait',
+        unit: 'px',
+        format: [canvas.width, canvas.height], 
+      });
+
+      pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+      pdf.save('resume.pdf');
+    });
+  };
 
   return (
     <div className='resume-div'>
@@ -32,7 +59,7 @@ export default function Resume({ formData }) {
               <h2>Skills</h2>
               <ul>
                 {personal.skills.map((skill, index) => (
-                   <li key={index}>{'•' + ' ' + skill}</li>
+                  <li key={index}>{'•' + ' ' + skill}</li>
                 ))}
               </ul>
             </div>
@@ -98,7 +125,8 @@ export default function Resume({ formData }) {
       </div>
 
       <div className="download-cv">
-        <button className='download-btn'>Download</button>
+        <button className='download-btn' onClick={handleDownload}>Download</button>
+        <p>* The downloaded pdf will be non editable. Make sure all details are correct before downloading.</p>
       </div>
     </div>
   );

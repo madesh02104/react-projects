@@ -1,8 +1,9 @@
-# React + Vite
+CV-builder is a web app which generates resume/CV(with download as PDF option) with the details provided by the user.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It is developed with proper state management in react for fast dynamic loading of resume as the user enters their details.
 
-Currently, two official plugins are available:
+What have I learnt in this project?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  - How to handle react components & JSX.
+  - Sharing state between components.
+  - How to pass objects/arrays down the componets and manipulate them using state.
