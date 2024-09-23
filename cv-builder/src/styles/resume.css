@@ -157,6 +157,11 @@ hr{
     flex-direction: column;
 }
 
+.download-cv p{
+    color: #fff;
+    font-size: 1.4rem;
+}
+
 .download-btn{
     color: #fff;
     text-align: center;
@@ -164,7 +169,5 @@ hr{
     padding: 1rem 2rem;
 }
 
-.download-btn span{
-    font-size: 1.6rem;
-    color: rgb(7, 3, 255);
-}
+
+
