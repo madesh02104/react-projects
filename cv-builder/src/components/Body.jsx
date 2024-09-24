@@ -36,6 +36,7 @@ export default function Body() {
         ],
       },
     ],
+    links: ['linkedin.com','x.com','"https://github.com'],
   });
 
   // Handler to update personal details
@@ -58,6 +59,11 @@ export default function Body() {
     setFormData((prevData) => ({ ...prevData, experience: updatedExperience }));
   };
 
+  // Handler to update links
+  const handleLinksChange = (updatedLinks) => {
+    setFormData((prevData) => ({ ...prevData, links: updatedLinks }));
+  };
+
   return (
     <div className="body-container">
       <Form
@@ -66,6 +72,7 @@ export default function Body() {
         handleEducationChange={handleEducationChange}
         handleLanguagesChange={handleLanguagesChange}
         handleExperienceChange={handleExperienceChange}
+        handleLinksChange={handleLinksChange}
       />
       <Resume formData={formData} />
     </div>

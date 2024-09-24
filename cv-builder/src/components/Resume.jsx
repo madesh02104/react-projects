@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import '../styles/resume.css';
 
 export default function Resume({ formData }) {
-  const { personal, education, languages, experience } = formData;
+  const { personal, education, languages, experience, links } = formData;
 
   const handleDownload = () => {
     const resume = document.querySelector('.resume-sheet');
@@ -121,6 +121,21 @@ export default function Resume({ formData }) {
               </ul>
             </div>
           </div>
+        </div>
+
+        <hr />
+
+        <div className="footer-section">
+          <h2>External Links</h2>
+          <ul>
+            {links.map((link, index) => (
+              <li key={index}>
+                <a href={link} target="_blank">
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
