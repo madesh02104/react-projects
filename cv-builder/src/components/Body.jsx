@@ -30,13 +30,17 @@ export default function Body() {
         duration: 'July 2019 - Present',
         location: 'Mountain View, California',
         achievements: [
-          'Optimized application performance, reducing load times by 40% through code refactoring and implementation of efficient algorithms.',
-          'Led a team of 5 developers in building a cross-platform mobile app that increased user engagement by 30% within 6 months.',
-          'Developed and deployed a scalable microservices architecture, improving system reliability and reducing downtime by 20%.'
+          'Optimized application performance, reducing load times by 40% through code refactoring.',
+          'Led a team of 5 developers in building a cross-platform app that increased user engagement by 30%.',
+          'Developed and deployed a scalable microservices architecture, improving system reliability.'
         ],
       },
     ],
-    links: ['linkedin.com','x.com','"https://github.com'],
+    links: [
+      { url: 'https://linkedin.com', description: 'I spend some time regularly on linkdin' },
+      { url: 'https://x.com', description: 'I tweet a lot about tech and various other topics' },
+      { url: 'https://github.com', description: 'I contribute to open source projects. View those on my Github' },
+    ],
   });
 
   // Handler to update personal details

@@ -128,15 +128,21 @@ export default function Resume({ formData }) {
         <div className="footer-section">
           <h2>External Links</h2>
           <ul>
-            {links.map((link, index) => (
-              <li key={index}>
-                <a href={link} target="_blank">
-                  {link}
-                </a>
-              </li>
-            ))}
+            {links.map((link, index) => {
+              const validLink = link.url.startsWith('http://') || link.url.startsWith('https://') ? link.url : `https://${link.url}`;
+
+              return (
+                <li key={index}>
+                  <p>{'•' + ' ' + link.description} : </p> 
+                  <a href={validLink} target="_blank" rel="noopener noreferrer" style={{ marginLeft: '5px' }}>
+                    {validLink}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
+
       </div>
 
       <div className="download-cv">
