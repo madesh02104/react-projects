@@ -1,0 +1,45 @@
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: white;
+}
+
+.header-left p{
+    display: none;
+    background-color: rgba(240, 248, 255, 0.685);
+    color: black;
+    border-radius: 0.5rem;
+    padding: 0.4rem 1rem;
+    margin-left: 0.5rem;
+    display: fixed;
+}
+
+.header-left svg:hover + p {
+    display: inline;
+}
+
+.header-left > * {
+    display: inline;
+}
+
+.header-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+h1{
+    font-family: 'Rowdies', Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    display: inline;
+    margin-right: 1rem;
+}
+
+p{
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    font-family: 'Rowdies',Arial, Helvetica, sans-serif;
+}
+
