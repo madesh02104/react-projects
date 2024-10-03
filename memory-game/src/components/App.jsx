@@ -1,15 +1,31 @@
-import '../styles/App.css';
-import Header from './Header.jsx'; 
-import Body from './Body.jsx';
+import { useState, useEffect } from 'react';
+import Header from './Header';
+import Body from './Body';
 
-function App() {
-  
+const App = () => {
+  const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
+
+  useEffect(() => {
+    if (score > bestScore) {
+      setBestScore(score);
+    }
+  }, [score, bestScore]);
+
+  const updateScore = (newScore) => {
+    setScore(newScore);
+  };
+
+  const resetScore = () => {
+    setScore(0);
+  };
+
   return (
-    <>
-      <Header />
-      <Body />
-    </>
-  )
-}
+    <div className="app">
+      <Header score={score} bestScore={bestScore} />
+      <Body updateScore={updateScore} resetScore={resetScore} />
+    </div>
+  );
+};
 
-export default App
+export default App;

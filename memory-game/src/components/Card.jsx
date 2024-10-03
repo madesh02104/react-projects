@@ -1,8 +1,19 @@
+import PropTypes from "prop-types";
+import '../styles/card.css';
 
-const Card = () => {
+const Card = ({ name, url, onClick }) => {
   return (
-    <div>Card</div>
-  )
-}
+    <div className="card" onClick={onClick}>
+      <img src={url} alt={name} />
+      <p>{name}</p>
+    </div>
+  );
+};
 
-export default Card
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+
+export default Card;
