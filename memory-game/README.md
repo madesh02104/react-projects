@@ -1,8 +1,8 @@
-# React + Vite
+This project is carried out for experimenting out the useEffect hook in react. Clicking same card (pokemoon themed) twice indicates the end of game.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+What have i learnt in this project:
+    -Implementation of useEffect
+    -Gained eextra knowledge about state management.
+    -Learned about CORS which restricted me from using certain api's fr this project.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+View live page at : https://madesh02104-memory-game.netlify.app/
