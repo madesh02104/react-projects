@@ -10,7 +10,7 @@ const Body = ({ updateScore }) => {
   const fetchPokemons = async () => {
     try {
       const responses = await Promise.all(
-        [...Array(20).keys()].map((i) =>
+        [...Array(15).keys()].map((i) =>
           fetch(`https://pokeapi.co/api/v2/pokemon/${i + 1}`).then((res) =>
             res.json()
           )
