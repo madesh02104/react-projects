@@ -6,11 +6,13 @@ import React from 'react'
 
 const MainLayout = () => {
   return (
-    <>
-        <NavBar />
+    <div className="min-h-screen flex flex-col">
+      <NavBar />
+      <div className="flex-grow m-2">
         <Outlet />
-        <Footer />
-    </>
+      </div>
+      <Footer />
+    </div>
   )
 }
 
