@@ -1,12 +1,22 @@
-import React from 'react'
 
 const CategoryCard = ({imgTag, title}) => {
   return (
-    <div className='flex flex-col justify-center items-center bg-gray-200 p-2 px-4 border border-black rounded'>
+    <div className='flex flex-col justify-center items-center 
+                    bg-gray-200 hover:bg-gray-100 
+                    p-4 sm:p-6 
+                    border border-black rounded
+                    transition-colors duration-200
+                    group'>
+      <div className='transform group-hover:scale-105 transition-transform duration-200'>
         {imgTag}
-        <p className='text-xl text-orange-500 px-2 rounded font-semibold mt-2'>{title}</p>
+      </div>
+      <p className='text-lg sm:text-xl text-orange-500 
+                    px-2 rounded font-semibold mt-4
+                    text-center'>
+        {title}
+      </p>
     </div>
   )
 }
 
-export default CategoryCard
+export default CategoryCard;
