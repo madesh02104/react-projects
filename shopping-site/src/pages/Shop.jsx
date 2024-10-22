@@ -11,9 +11,9 @@ const Shop = () => {
   }
 
   return (
-    <section className='mt-20 flex flex-col justify-between sm:flex-row gap-4'>
+    <section className='mt-20 flex flex-col justify-between gap-4'>
       <CategoryTab handleCategoryChange={handleCategoryChange}/>
-      <ItemCards />
+      <ItemCards category={category}/>
     </section>
   )
 }

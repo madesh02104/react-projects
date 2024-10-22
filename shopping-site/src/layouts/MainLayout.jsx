@@ -25,12 +25,12 @@ const MainLayout = () => {
       });
   }, []);
 
-  const handleOperation = (id, Operation) => {
+  const handleOperation = (id, operation) => {
     setInventory((prev) => {
       return prev.map((item) => {
         if (item.id === id) {
           if (operation === "decrement") {
-            return { ...item, quantityOrdered: item.quantityOrdered - 1 };
+            return { ...item, quantityOrdered: (item.quantityOrdered > 0 ? item.quantityOrdered -1 : item.quantityOrdered)};
           } else {
             return { ...item, quantityOrdered: item.quantityOrdered + 1 };
           }
