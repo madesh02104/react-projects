@@ -1,8 +1,20 @@
 import React from 'react'
+import CategoryTab from '../components/CategoryTab'
+import ItemCards from '../components/ItemCards'
+import { useState } from 'react'
 
 const Shop = () => {
+  const [category, setCategory] = useState('all');
+
+  function handleCategoryChange(newCategory) {
+    setCategory(newCategory);
+  }
+
   return (
-    <div>Shop</div>
+    <section className='mt-20 flex flex-col justify-between sm:flex-row gap-4'>
+      <CategoryTab handleCategoryChange={handleCategoryChange}/>
+      <ItemCards />
+    </section>
   )
 }
 
