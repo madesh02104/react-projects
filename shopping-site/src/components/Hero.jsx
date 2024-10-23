@@ -1,4 +1,5 @@
 import React from "react";
+import heroImage from '../assets/hero-image.jpg';
 
 const Hero = () => {
   return (
@@ -20,7 +21,7 @@ const Hero = () => {
       </div>
       <div className="w-full md:w-1/2 flex justify-center items-center">
         <img
-          src="src/assets/hero-image.jpg"
+          src={heroImage}
           alt="online shopping image"
           title="Image by storyset on Freepik"
           className="h-64 sm:h-72 md:h-80 w-auto object-contain"
