@@ -13,23 +13,31 @@ const MainLayout = () => {
   const [inventory, setInventory] = useState([]);
 
   useEffect(() => {
-    const fetchInventory = fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => {
-        for (let item of data) {
-          item.quantityOrdered = 0;
-          item.price = item.price * 75;
-        }
-        setInventory(data);
-        console.log(inventory);
-      });
+    const fetchInventory = async () => {
+      try {
+        const res = await fetch("https://fakestoreapi.com/products");
+        const data = await res.json();
+  
+        const updatedData = data.map((item) => ({
+          ...item,
+          quantityOrdered: 0,
+          price: item.price * 75,
+        }));
+        setInventory(updatedData);
+      } catch (error) {
+        console.error("Error fetching inventory:", error);
+      }
+    };
+  
+    fetchInventory();
   }, []);
+  
 
   const handleOperation = (id, operation) => {
     setInventory((prev) => {
       return prev.map((item) => {
         if (item.id === id) {
-          if (operation === "decrement") {
+          if (operation === "decrement") { 
             return { ...item, quantityOrdered: (item.quantityOrdered > 0 ? item.quantityOrdered -1 : item.quantityOrdered)};
           } else {
             return { ...item, quantityOrdered: item.quantityOrdered + 1 };

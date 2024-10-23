@@ -2,14 +2,15 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="m-2 rounded bg-gray-200">
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-8 px-4">
-          <div className="w-[70%] block">
-            <h4 className="text-xl font-medium text-orange-600 text-center my-2">
+    <footer className="mt-8">
+      <div className="mx-2 rounded bg-gray-200">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8 p-6">
+
+          <div className="w-full md:w-2/3 space-y-4">
+            <h4 className="text-xl font-medium text-orange-600">
               Our Promise
             </h4>
-            <p className="tracking-wide">
+            <p className="tracking-wide leading-relaxed">
               We at Kadai shopping aim to deliver products that provide higher
               value to our customers. Our service both in product quality and
               delivery time stands out from others. And still we constantly try
@@ -18,31 +19,43 @@ const Footer = () => {
               community and feel free to contact us for any queries or details.
             </p>
           </div>
-          <div className="flex justify-center items-start flex-col w-full sm:w-[30%] gap-4 leading-4">
-            <h4 className="text-xl self-center font-medium text-orange-600 my-2 text-center">
-              Contact Us{" "}
+
+          <div className="w-full md:w-1/3 space-y-4">
+            <h4 className="text-xl font-medium text-orange-600">
+              Contact Us
             </h4>
-            <p>&#128231; kadai@gmail.com</p>
-            <p>&#128222; +91 7904855050</p>
-            <p>
-              &#127968; No. 6, Vivekanandar St., Dubai Kurukku sandhu, Dubai
-              main road, Dubai.{" "}
-            </p>
+            <div className="space-y-3">
+              <p className="flex items-center gap-2">
+                <span>📧</span>
+                <span>kadai@gmail.com</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <span>📞</span>
+                <span>+91 7904855050</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <span>🏠</span>
+                <span>No. 6, Vivekanandar St., Dubai Kurukku sandhu, Dubai
+                main road, Dubai.</span>
+              </p>
+            </div>
           </div>
         </div>
-        <div className="text-center my-2 text-orange-500 mb-0">
+
+        <div className="text-center py-4 text-orange-500 border-t border-gray-300">
           Developed by{" "}
           <a
-            className="hover:text-orange-600 active:scale-50"
+            className="hover:text-orange-600 transition-colors"
             href="https://github.com/madesh02104"
             target="_blank"
+            rel="noopener noreferrer"
           >
             @Madesh
           </a>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;
